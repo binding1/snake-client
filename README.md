@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["Multiplayer Snake Game!"](https://prnt.sc/BC_vSXKIgMJS)
+!["Multiplayer Snake Game!"](https://i.imgur.com/G4s7He2.png)
 
 
 ## Getting Started
