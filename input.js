@@ -5,14 +5,16 @@ let connection;
 
 let keyPressClear;
 
-const handleUserInput = function (key) { //function which is an event listener for user input
+const handleUserInput = function(key) { //function which is an event listener for user input
+
   const keyPress = (key) => { //function that makes snake move continuously in direction
     keyPressClear = setInterval(() => {
-      connection.write(key)
-    }, 50)
-  }
+      connection.write(key);
+    }, 50);
+  };
+
   if (key === '\u0003') {
-    console.log('Game exiting...')
+    console.log('Game exiting...');
     process.exit();
   } else if (key === 'w') {
     clearInterval(keyPressClear); //clears previous interval input so snake doesn't take combined directions i.e. diagonal
@@ -28,12 +30,12 @@ const handleUserInput = function (key) { //function which is an event listener f
     keyPress('Move: right');
   } else if (key === 'j') {
     connection.write('Say: Hi!');
-  } else if (key === 'k') { 
+  } else if (key === 'k') {
     connection.write("Say: I'm gonna win!");
   } else if (key === 'l') {
     connection.write("Say: GG!");
   }
-}; 
+};
 
 // setup interface to handle user input from stdin
 const setupInput = function(conn) {
