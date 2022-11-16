@@ -19,9 +19,6 @@ const connect = function() {
   conn.on('connect', () => { //event to notify user that they are connected to server
     console.log('Successfully connected to the game server.');
     conn.write(`Name: JB`);
-    // setInterval(() => {
-    //   conn.write('Move: down');
-    // }, 50);
   });
 
   return conn;
