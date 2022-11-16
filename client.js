@@ -12,7 +12,7 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on('data', (data) => { //event that returns data to user
+  conn.on('data', (data) => { //event that logs game data to user
     console.log(data);
   });
   
@@ -23,8 +23,7 @@ const connect = function () {
     //   conn.write('Move: down');
     // }, 50);
   });
-
-
+  
   return conn;
 };
 

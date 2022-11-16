@@ -3,18 +3,29 @@ const { stdin } = require("process");
 
 let connection;
 
-const handleUserInput = function (key) {
+let keyPressClear;
+
+const handleUserInput = function (key) { //function which is an event listener for user input
+  const keyPress = (key) => { //function that makes snake move continuously in direction
+    keyPressClear = setInterval(() => {
+      connection.write(key)
+    }, 50)
+  }
   if (key === '\u0003') {
     console.log('Game exiting...')
     process.exit();
   } else if (key === 'w') {
-    connection.write('Move: up');
+    clearInterval(keyPressClear); //clears previous interval input so snake doesn't take combined directions i.e. diagonal
+    keyPress('Move: up');
   } else if (key === 'a') {
-    connection.write('Move: left');
+    clearInterval(keyPressClear);
+    keyPress('Move: left');
   } else if (key === 's') {
-    connection.write('Move: down');
+    clearInterval(keyPressClear);
+    keyPress('Move: down');
   } else if (key === 'd') {
-    connection.write('Move: right');
+    clearInterval(keyPressClear);
+    keyPress('Move: right');
   } else if (key === 'j') {
     connection.write('Say: Hi!');
   } else if (key === 'k') { 
