@@ -8,8 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["Multiplayer Snake Game!"](https://prnt.sc/BC_vSXKIgMJS)
 
 
 ## Getting Started
@@ -20,4 +19,4 @@ Before you can run this client, you will need to be running the server side whic
 ## What our players have said
 
 > This game is fun!
-- User1
+- -User1
